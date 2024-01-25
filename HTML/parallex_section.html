@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallex</title>
+    <style>
+        section {
+            position: relative;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../resources/akshardham-temple.jpg);
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 1px 1px 3px black;
+            z-index: 1;
+            font-size: 3em;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="bg"></div>
+        <h1>Simple parallax sections</h1>
+    </section>
+    <section>
+        <div class="bg"></div>
+        <h1>Hey look, a title</h1>
+    </section>
+    <section>
+        <div class="bg"></div>
+        <h1>They just keep coming</h1>
+    </section>
+    <section>
+        <div class="bg"></div>
+        <h1>So smooth though</h1>
+    </section>
+    <section>
+        <div class="bg"></div>
+        <h1>Nice, right?</h1>
+    </section>
+
+
+
+    <header>
+        <a href="https://greensock.com/scrolltrigger">
+            <img class="greensock-icon"
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/scroll-trigger-logo-light.svg" width="200"
+                height="64" />
+        </a>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
+        integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"
+        integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // This is the OLD version that doesn't work as well as the new one which can be found at https://codepen.io/GreenSock/pen/rNJQPXz?editors=0010
+        // If you resize this to be a portrait orientation, you'll see gaps.
+
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        let getRatio = el => window.innerHeight / (window.innerHeight + el.offsetHeight);
+
+        gsap.utils.toArray("section").forEach((section, i) => {
+            section.bg = section.querySelector(".bg");
+
+            // Give the backgrounds some random images
+            section.bg.style.backgroundImage = `url(https://picsum.photos/1600/800?random=${i})`;
+
+            // the first image (i === 0) should be handled differently because it should start at the very top.
+            // use function-based values in order to keep things responsive
+            gsap.fromTo(section.bg, {
+                backgroundPosition: () => i ? `50% ${-window.innerHeight * getRatio(section)}px` : "50% 0px"
+            }, {
+                backgroundPosition: () => `50% ${window.innerHeight * (1 - getRatio(section))}px`,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: section,
+                    start: () => i ? "top bottom" : "top top",
+                    end: "bottom top",
+                    scrub: true,
+                    invalidateOnRefresh: true // to make it responsive
+                }
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>

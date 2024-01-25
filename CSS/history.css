@@ -1,0 +1,265 @@
+*{
+    
+    margin: 0px;
+    padding: 0px;
+}
+.headings {
+    font-family: Papyrus, fantasy !important;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    background-image: url(../resources/history-header-bg.jpg);
+    object-fit: cover;
+}
+
+
+h1 {
+    font-family: Papyrus, fantasy !important;
+    font-size: 36px;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    /* max-width: 900px; */
+    /* margin: 20px auto; */
+    /* padding: 20px; */
+    background-color: rgb(46, 30, 30);
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    color: #eaac8d;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#main{
+    width: 100vw;
+    height: fit-content;
+    margin-top: 15vh;
+    background-image: url(../resources/history-header-bg.jpg);
+    mask-repeat: no-repeat;
+    object-fit: cover;
+    object-position: center;
+    /* background-color: rgb(100, 100, 100); */
+}
+#firstpage{
+    width: 100vw;
+    height: 80vh;
+    background-color: #0000ff;
+    position: relative;
+    display: flex;
+    /* justify-content: space-around;
+    align-items: center; */
+}
+#taj{
+    width: 40vw;
+    height: 60vh;
+    background-color: #888888;
+    /* background-image: url(../resources/Taj-Mahal-and-its-reflection.webp); */
+    /* object-fit: contain; */
+    
+    /* background-size:contain; */
+    /* width: 40vw; */
+    /* object-fit: cover; */
+    /* position: absolute;
+    top: 200px; */
+    /* display: flex; */
+}
+/* #taj>img{
+    width: 20vw;
+    height: 60vh; 
+} */
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    width: 30vw;
+    height: 30vw;
+    margin: 0px 5vw;
+    margin-bottom: 11vh !important;
+    perspective: 1000px;
+    /* box-shadow: 0px 0px 60px 20px goldenrod; */
+
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    /* color: white; */
+    border: 1px solid #ccc;
+    border-radius: 20px !important;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card-front {
+    box-shadow: 0px 0px 40px 10px #ec5c38;
+    background-color: #3498db;
+    transform: translateZ(5px);
+    color: #2e0b13;
+    
+}
+
+.card-back {
+    box-shadow: 0px 0px 40px 10px #ec5c38;
+    background-color: #355070;
+    padding: 5%;
+    transform: rotateY(180deg);
+    color: #e88c7d;
+    /* max-width: 30vw; */
+}
+
+#card-taj {
+    background-image: url(../resources/Taj-Mahal-and-its-reflection.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+#card-qutub{
+    background-image: url(../resources/qutab-minar.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#card-konark{
+    background-image: url(../resources/konark-sun-temple.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#card-akshardham{
+    background-image: url(../resources/akshardham-temple.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#card-lotus{
+    background-image: url(../resources/lotus-temple.webp);
+    background-size: cover;
+    background-position: center;
+}
+#card-sanchi{
+    background-image: url(../resources/sanchi-stupa.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.ancient-content{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    /* width: 100vw; */
+}
+.intro{
+    border: 3px solid green;
+    color: #e88b7d13;
+    text-align:justify;
+    padding: 2vh 2vw;
+    line-height: 1.2;
+    /* width: 100vw; */
+    /* display:contents; */
+    /* width: 20vw;
+    height: 30vh; */
+}
+.intro:hover{
+    color: #e88c7d;
+    transition: all ease-in-out 0.5s;
+}
+
+.pre-history{
+    display: flex;
+    justify-content: space-evenly;
+}
+.pleft{
+    width: 70%;
+}
+
+#medieval-history{
+    border: 2px solid palegreen;
+}
+.medieval-content{
+    display: flex;
+    justify-content: space-evenly;
+}
+.medieval-content .medleft p{
+    margin: 20px 0px;
+}
+.medleft{
+    width: 50vw;
+}
+.medright{
+    width: 33vw;
+}
+.medright img{
+    width: 30vw;
+    margin-bottom: 5vh;
+    height: 40vh;
+}
+.modern-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.modern-content p{
+    margin: 20px 0px;
+    width: 85vw;
+}
+.medleft p{
+    width: 50vw;
+}
+

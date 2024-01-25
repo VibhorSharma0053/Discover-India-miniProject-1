@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            background-color: rgb(20, 20, 20);
+            margin: 0px;
+            padding: 0;
+        }
+
+        #page {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(20, 20, 20);
+            margin: 0;
+        }
+
+        #menu {
+            align-items: center;
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #menu-items {
+            margin-left: clamp(4rem, 20vw, 48rem);
+            position: relative;
+            z-index: 2;
+        }
+
+        #menu[data-active-index="0"]>#menu-background-pattern {
+            background-position: 0% -16%;
+        }
+
+        #menu[data-active-index="1"]>#menu-background-pattern {
+            background-position: 0% -33%;
+        }
+
+        #menu[data-active-index="2"]>#menu-background-pattern {
+            background-position: 0% -50%;
+        }
+
+        #menu[data-active-index="3"]>#menu-background-pattern {
+            background-position: 0% -66%;
+        }
+        #menu[data-active-index="4"]>#menu-background-pattern {
+            background-position: 0% -83%;
+        }
+        #menu[data-active-index="5"]>#menu-background-pattern {
+            background-position: 0% -100%;
+        }
+
+
+        #menu[data-active-index="0"]>#menu-background-image {
+            background-position: center 45%;
+        }
+
+        #menu[data-active-index="1"]>#menu-background-image {
+            background-position: center 48%;
+        }
+
+        #menu[data-active-index="2"]>#menu-background-image {
+            background-position: center 50%;
+        }
+
+        #menu[data-active-index="3"]>#menu-background-image {
+            background-position: center 53%;
+        }
+        #menu[data-active-index="4"]>#menu-background-image {
+            background-position: center 57%;
+        }
+        #menu[data-active-index="5"]>#menu-background-image {
+            background-position: center 60%;
+        }
+
+        #menu-background-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 9%,
+                    transparent 9%);
+            background-position: 0% 0%;
+            background-size: 12vmin 12vmin;
+            height: 100vh;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            transition: opacity 800ms ease,
+                background-size 800ms ease,
+                background-position 800ms ease;
+            width: 100vw;
+            z-index: 1;
+        }
+
+        #menu-background-image {
+            background-image: url("../Resources/jaipur-india-travel-AP84913.webp");
+            background-position: center 40%;
+            background-size: 110vmax;
+            height: 100%;
+            left: 0px;
+            opacity: 0.15;
+            position: absolute;
+            top: 0px;
+            transition: opacity 800ms ease,
+                background-size 800ms ease,
+                background-position 800ms ease;
+            width: 100%;
+            z-index: 0;
+        }
+
+        #menu-items:hover~#menu-background-pattern {
+            background-size: 11vmin 11vmin;
+            opacity: 0.5;
+        }
+
+        #menu-items:hover~#menu-background-image {
+            background-size: 100vmax;
+            opacity: 0.1;
+        }
+
+        #menu-items:hover>.menu-item {
+            opacity: 0.3;
+        }
+
+        #menu-items:hover>.menu-item:hover {
+            opacity: 1;
+        }
+
+        .menu-item {
+            color: white;
+            cursor: pointer;
+            display: block;
+            font-family: 'Ibarra Real Nova', serif;
+            font-size: clamp(2rem, 4vw, 6rem);
+            padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+            text-decoration: none;
+            transition: opacity 400ms ease;
+        }
+        .menu-item a{
+            color: white;
+            text-decoration: none;
+        }
+        #cut{
+            position: fixed;
+            right: 50px;
+            top: 50px;
+            width: 50px;
+            height: 50px;
+            z-index: 10;
+        }
+        
+        #cut a {
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-stretch: ultra-expanded;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="myMenu">
+        <div id="page">
+            <div id="menu">
+                <div id="menu-items">
+                    <div class="menu-item"><a href="homePage2.html">Home</a></div>
+                    <div class="menu-item"><a href="#">Discover India</a></div>
+                    <div class="menu-item"><a href="shop.html">Merchandise </a></div>
+                    <div class="menu-item"><a href="#">Gallery</a></div>
+                    <div class="menu-item"><a href="aboutUs.html">About </a></div>
+                    <div class="menu-item"><a href="#">Contact us</a></div>
+                </div>
+                <div id="menu-background-pattern"></div>
+                <div id="menu-background-image"></div>
+            </div>
+        </div>
+        <div id="cut">
+            <a href="homePage2.html">
+                X
+            </a>
+        </div>
+    </div>
+    <script>
+        const menu = document.getElementById("menu");
+
+        Array.from(document.getElementsByClassName("menu-item"))
+            .forEach((item, index) => {
+                item.onmouseover = () => {
+                    menu.dataset.activeIndex = index;
+                }
+            });
+
+        function openMenu() {
+            document.getElementById("page").style.width = "100vw";
+        }
+    </script>
+</body>
+
+</html>

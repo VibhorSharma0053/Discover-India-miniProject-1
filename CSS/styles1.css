@@ -1,0 +1,237 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    animation: fadeIn 1.5s ease;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    animation: slideIn 1s forwards;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f8c30b;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 800;
+    margin: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeIn 1.5s ease;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+}
+
+button {
+    background: #f8c30b;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #333;
+    color: #f8c30b;
+}
+
+/* Explore India Page Styles */
+#destinations {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: slideIn 1s forwards;
+}
+
+.destination {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    animation: slideIn 1s forwards;
+}
+
+.destination:hover {
+    transform: scale(1.05);
+}
+
+.destination h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.destination p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+#travel-tips ul {
+    list-style: disc;
+    padding-left: 20px;
+    animation: slideIn 1s forwards;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#contact-info a {
+    text-decoration: none;
+    color: #f8c30b;
+    font-weight: 600;
+}
+
+#social-media img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+/* Background Images */
+body::before {
+    content: "";
+    background: url('background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: brightness(0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+/* Explore India Page Styles */
+#destinations {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: slideIn 1s forwards;
+}
+
+.destination {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    animation: slideInFromLeft 0.8s both;
+    cursor: pointer;
+}
+
+.destination:hover {
+    transform: scale(1.05);
+    animation: none;
+}
+
+/* JavaScript Interactivity */
+const buttons = document.querySelectorAll('button');
+const destinations = document.querySelectorAll('.destination');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        alert("You clicked the button!");
+    });
+});
+
+destinations.forEach(destination => {
+    destination.addEventListener('click', () => {
+        destination.style.animation = 'fadeOut 0.5s both';
+        setTimeout(() => {
+            destination.style.display = 'none';
+        }, 500);
+    });
+});
+

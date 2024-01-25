@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            background-color: black;
+            margin: 0px;
+        }
+        .image-track>img{
+            width: 40vmin;
+            height: 56vmin;
+            object-fit: cover;
+            object-position: center;
+        }
+        .image-track{
+            display: flex;
+            gap: 4vmin;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(0%, -75%);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="image-track">
+            <img class="image" src="../resources/ex-card1.jpeg" draggable="false" alt="">
+            <img class="image" src="../resources/ex-card2.jpeg" draggable="false" alt="">
+            <img class="image" src="../resources/ex-card3.jpeg" draggable="false" alt="">
+            <img class="image" src="../resources/ex-card4.jpeg" draggable="false" alt="">
+            <img class="image" src="../resources/ex-card5.jpeg" draggable="false" alt="">
+            <img class="image" src="../resources/ex-card6.jpeg" draggable="false" alt="">
+        </div>
+    </div>
+    <script>
+        window.onmousedown = e => {
+            track.dataset.mouseDownAt = e.clientX;
+        }
+        window.onmouseup = () => {
+            track.dataset.mouseDownAt = "0";
+            track.dataset.prevPercentage = track.dataset.percentage;
+        }
+        window.onmousemove = e => {
+            if(track.dataset.mouseDownAt === "0") return;
+
+            const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+            maxDelta = window.innerWidth / 2;
+
+            const percentage = (mouseDelta / maxDelta) * -100,
+                nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
+
+            track.dataset.percentage = nextPercentage;
+
+            track.style.transform = `translate(${nextPercentage}%, -75%)`;
+            for(const image of track.getElementsByClassName("image")) {
+                image.style.objectPosition = `${nextPercentage + 100} 50%`;
+            }
+        }
+    </script>
+</body>
+</html>

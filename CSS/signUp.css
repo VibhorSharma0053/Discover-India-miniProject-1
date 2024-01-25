@@ -1,0 +1,89 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#main {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(0, 255, 179), rgb(38, 0, 255));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../Resources/jaipur-india-travel-AP84913.webp);
+  object-fit: cover;
+  object-position: bottom bottom;
+}
+#front {
+  width: 500px;
+  height: 550px;
+  background: linear-gradient(to right, rgb(0, 255, 98), rgb(0, 211, 211));
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all ease 1s;
+  justify-content: space-evenly;
+  border-radius: 7px;
+}
+#back {
+  width: 500px;
+  height: 550px;
+  background: linear-gradient(to right, rgb(0, 211, 211), rgb(0, 255, 98));
+  position: absolute;
+  z-index: 3;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all ease 1s;
+  justify-content: space-evenly;
+  border-radius: 7px;
+}
+#f-btn {
+  font-size: 23px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  background-color: #0a8b56;
+  cursor: pointer;
+}
+#b-btn {
+  font-size: 23px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  background-color: #0a8b56;
+  cursor: pointer;
+}
+#formUp {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: whitesmoke;
+}
+#formUp h2 {
+  font-weight: 100;
+}
+input {
+  padding: 10px 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  width: 300px;
+}
+#formIn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: whitesmoke;
+}

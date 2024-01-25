@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    height: 200vh; /* Create enough space to scroll */
+}
+
+.scrolling-element {
+    width: 100px;
+    height: 100px;
+    background-color: #007BFF;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
