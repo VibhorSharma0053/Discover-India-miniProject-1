@@ -4,13 +4,14 @@
 }
 body{
     /* font-family: Arial, Helvetica, sans-serif; */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100vw;
 }
 p{
     font-size: 20px;
 }
 .heading {
-    font-family: Papyrus, fantasy !important;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 #main{
     width: 100vw;
@@ -21,7 +22,7 @@ p{
     align-items: start;
 }
 .header{
-    background-image: url(../resources/technology1.jpg);
+    background-image: url(../Resources/vlcsnap-2024-01-22-23h01m44s632.png);
     width: 100vw;
     height: 80vh;
     object-fit: cover;
@@ -34,7 +35,7 @@ p{
     font-weight: 600;
     position: relative;
     bottom: 10px;
-    font-family: Papyrus, fantasy;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     position: relative;
     top: 40vh;
@@ -53,8 +54,7 @@ p{
     font-size: 20px;
     font-weight: 700;
     text-decoration: none;
-    font-family: Papyrus, fantasy;
-
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .title h1, h3{
     color: white;
@@ -84,7 +84,7 @@ p{
     color: white;
     border-bottom-right-radius: 100px;
     border-bottom-left-radius: 100px;
-    font-family: Papyrus, fantasy !important;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .advantage{
     display: flex;
@@ -265,4 +265,155 @@ p{
 .development ul li{
     margin-bottom: 2vh;
     line-height: 1.3;
+}
+
+.media
+{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    background-color: rgb(113, 167, 202);
+    padding: 20px;
+    width:97vw;
+}
+.media video{
+    width:90vw;
+    height: 55vh
+}
+.media h1{
+    font-size: 2.5em;
+    text-align:center;
+    color:#000000;
+}
+.media h3{
+   color: #000;
+}
+.media p{
+    color: rgb(27, 26, 26);
+}
+.media img
+{
+    width: 67vw;
+    height:62vh;
+    border-radius: 4px;
+
+}
+.topscientist{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 97vw;
+}
+.topscientist h1
+{
+    font-weight: bold;
+    text-align: start;
+    color: #000000;
+}
+.topscientist h2
+{
+   color: #000;
+   font-weight: bold;
+}
+.topscientist i
+{
+    margin-bottom: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+.topscientist img
+{
+    width: 65vw;
+    height: 50vh;
+    margin: 20px;
+    border-radius: 10px;
+}
+.topscientist video
+{
+    width: 65vw;
+    height: 50vh;
+    margin: 20px;
+    border-radius: 10px;
+}
+@media only screen and (min-width: 768px) {
+    .media{
+        max-width: 100%;
+        margin-right: 20px;
+    }
+    .topscientist{
+        max-width: 100%;
+        float: right;
+    }
+}
+.isro{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    padding: 20px;
+    width: 97vw;
+}
+.isro h1
+{
+    font-weight: bold;
+    text-align: start;
+    color: #ffffff;
+}
+.isro h2
+{
+   color: #ffffff;
+   font-weight: bold;
+}
+.isro p
+{
+    margin: 50px;
+    color: #e9e1e1;
+    font-weight: bold;
+}
+.isro li
+{
+    margin: 30px;
+    color: #e9e1e1;
+    font-weight: bold;
+}
+.isro img
+{
+    width: 65vw;
+    height: 50vh;
+    margin: 20px;
+    border-radius: 10px;
+}
+.isro video
+{
+    width: 65vw;
+    height: 50vh;
+    margin: 20px;
+    border-radius: 10px;
+}
+.india75
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(90, 90, 90);
+    padding: 20px;
+    width: 97vw;
+    color: #ebebeb;
+}
+.india75 video
+{
+    width: 65vw;
+    height: 50vh;
+    margin: 20px;
+    border-radius: 20px;
+} 
+footer 
+{
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px;
 }

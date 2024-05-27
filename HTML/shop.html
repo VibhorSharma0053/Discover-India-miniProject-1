@@ -3,209 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../CSS/shop.css">
+    <title>Shop | Discover India</title>
+    <link rel="stylesheet" href="../CSS/Shop.css">
 </head>
 <body>
     <div id="main">
-        <div id="nav">
-            <a href="homePage2.html">Home</a>
-            <a href="homePage2.html #discover-india">Explore</a>
-            <a href="aboutUs.html">About</a>
-            <a href="shop.html">Shop</a>
+        <div class="nav">
+            <div class="nav-left">
+                <a href="../HTML/Home.html">Home</a>
+                <a href="../HTML/Home.html#discover-india" id="nav-explore">Explore</a>
+                <a href="../HTML/Home.html#slider-container">Destination</a>
+            </div>
+            <div class="nav-center">
+                <img src="../resources/Discover-India-Logo.png" alt="">
+                <h2>Discover India</h2>
+            </div>
+            <div class="nav-right">
+                <input type="text" placeholder="Search" name="search">
+                <button onclick="myFind();">
+                    Search
+                </button>
+                <a href="HomeMenu.html"><svg xmlns="http://www.w3.org/2000/svg" height="28" width="24"
+                        viewBox="0 0 448 512">!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.
+                        <path
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                    </svg></a>
+            </div>
         </div>
         <h1>Shop</h1>
         <hr>
         <div id="container">
             <div class="cards">
                 <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
+                    <img src="../Resources/shop-card1.webp" alt="">
                 </div>
                 <div class="details">
-                    <h3>Tshirt</h3>
+                    <h3>Tribal Wall Decor</h3>
                     <p>
-                        <span>Price: $59.99</span>
+                        <span>Price: Rs.1299</span>
+                        <a href="https://www.flipkart.com/chaque-decor-golden-frame-1-metallic-human-figurines-dhokra-warli-wall-art/p/itmd73454dcc86fa?pid=WDCGZWZ8JNZMVKUZ&lid=LSTWDCGZWZ8JNZMVKUZ1EDIQC&marketplace=FLIPKART&q=regional+arts+and+crafts&store=search.flipkart.com&srno=s_1_40&otracker=search&otracker1=search&fm=Search&iid=dc25bdbc-ec4a-4ca5-bbeb-28c25f59f761.WDCGZWZ8JNZMVKUZ.SEARCH&ppt=sp&ppn=sp&ssid=62g034q6yo0000001706863154751&qH=7751f3fbb4831e8d" class="buy">Buy Now</a>
+                    </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cimg">
+                    <img src="../Resources/shop-card2.webp" alt="">
+                </div>
+                <div class="details">
+                    <h3>Showpieces</h3>
+                    <p>
+                        <span>Price: Rs.899</span>
+                        <a href="https://www.flipkart.com/search?q=regional%20arts%20and%20crafts&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" class="buy">Buy Now</a>
+                    </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cimg">
+                    <img src="../Resources/shop-card3.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h3>Shawls</h3>
+                    <p>
+                        <span>Price: Rs.5999</span>
+                        <a href="https://www.flipkart.com/search?q=regional%20arts%20and%20crafts&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" class="buy">Buy Now</a>
+                    </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cimg">
+                    <img src="../Resources/shop-card4.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h3>Mats</h3>
+                    <p>
+                        <span>Price: Rs.1999</span>
+                        <a href="https://www.flipkart.com/search?q=regional%20arts%20and%20crafts&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" class="buy">Buy Now</a>
+                    </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cimg">
+                    <img src="../Resources/shop-card5.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h3>Blue Ceramics</h3>
+                    <p>
+                        <span>Price: Rs.499</span>
+                        <a href="https://www.flipkart.com/search?q=regional%20arts%20and%20crafts&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" class="buy">Buy Now</a>
+                    </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cimg">
+                    <img src="../Resources/shop-card6.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h3>Bamboo Basket</h3>
+                    <p>
+                        <span>Price: Rs.599</span>
+                        <a href="https://www.flipkart.com/search?q=regional%20arts%20and%20crafts&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" class="buy">Buy Now</a>
+                    </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cimg">
+                    <img src="../Resources/shop-card7.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h3>Earthen Vessels</h3>
+                    <p>
+                        <span>Price: Rs.799</span>
+                        <a href="https://www.flipkart.com/search?q=regional%20arts%20and%20crafts&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" class="buy">Buy Now</a>
+                    </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cimg">
+                    <img src="../Resources/shop-card9.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h3>Wall Hangings</h3>
+                    <p>
+                        <span>Price: Rs.2499</span>
                         <a href="#" class="buy">Buy Now</a>
                     </p>
                 </div>
             </div>
             <div class="cards">
                 <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
+                    <img src="../Resources/shop-card10.jpeg" alt="">
                 </div>
                 <div class="details">
-                    <h3>Tshirt</h3>
+                    <h3>Flower Pots</h3>
                     <p>
-                        <span>Price: $59.99</span>
-                        <a href="#" class="buy">Buy Now</a>
+                        <span>Price: Rs.1249</span>
+                        <a href="https://www.flipkart.com/search?q=regional%20arts%20and%20crafts&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" class="buy">Buy Now</a><a href="https://www.flipkart.com/search?q=regional%20arts%20and%20crafts&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" class="buy">Buy Now</a>
                     </p>
                 </div>
             </div>
             <div class="cards">
                 <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
+                    <img src="../Resources/shop-card11.jpeg" alt="">
                 </div>
                 <div class="details">
-                    <h3>Tshirt</h3>
+                    <h3>Wooden Boxes</h3>
                     <p>
-                        <span>Price: $59.99</span>
-                        <a href="#" class="buy">Buy Now</a>
+                        <span>Price: Rs.799</span>
+                        <a href="https://www.flipkart.com/search?q=regional%20arts%20and%20crafts&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" class="buy">Buy Now</a>
                     </p>
                 </div>
             </div>
             <div class="cards">
                 <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
+                    <img src="../Resources/shop-card12.jpeg" alt="">
                 </div>
                 <div class="details">
-                    <h3>Tshirt</h3>
+                    <h3>Handcrafted Saree</h3>
                     <p>
-                        <span>Price: $59.99</span>
-                        <a href="#" class="buy">Buy Now</a>
+                        <span>Price: Rs.3499</span>
+                        <a href="https://www.flipkart.com/search?q=regional%20arts%20and%20crafts&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" class="buy">Buy Now</a>
                     </p>
                 </div>
             </div>
             <div class="cards">
                 <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
+                    <img src="../Resources/shop-card13.webp" alt="">
                 </div>
                 <div class="details">
-                    <h3>Tshirt</h3>
+                    <h3>Wooden Stand</h3>
                     <p>
-                        <span>Price: $59.99</span>
-                        <a href="#" class="buy">Buy Now</a>
+                        <span>Price: Rs.699</span>
+                        <a href="https://www.flipkart.com/search?q=regional%20arts%20and%20crafts&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" class="buy">Buy Now</a>
                     </p>
                 </div>
             </div>
             <div class="cards">
                 <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
+                    <img src="../Resources/shop-card14.webp" alt="">
                 </div>
                 <div class="details">
-                    <h3>Tshirt</h3>
+                    <h3>Brass Shells</h3>
                     <p>
-                        <span>Price: $59.99</span>
-                        <a href="#" class="buy">Buy Now</a>
+                        <span>Price: Rs.2799</span>
+                        <a href="https://www.flipkart.com/search?q=regional%20arts%20and%20crafts&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" class="buy">Buy Now</a>
                     </p>
                 </div>
             </div>
             <div class="cards">
                 <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
+                    <img src="../Resources/shop-card15.webp" alt="">
                 </div>
                 <div class="details">
-                    <h3>Tshirt</h3>
+                    <h3>Lamps</h3>
                     <p>
-                        <span>Price: $59.99</span>
-                        <a href="#" class="buy">Buy Now</a>
+                        <span>Price: Rs.1499</span>
+                        <a href="https://www.flipkart.com/search?q=regional%20arts%20and%20crafts&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" class="buy">Buy Now</a>
                     </p>
                 </div>
             </div>
             <div class="cards">
                 <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
+                    <img src="../Resources/shop-card16.webp" alt="">
                 </div>
                 <div class="details">
-                    <h3>Tshirt</h3>
+                    <h3>Wall Mounts</h3>
                     <p>
-                        <span>Price: $59.99</span>
-                        <a href="#" class="buy">Buy Now</a>
+                        <span>Price: Rs.2999</span>
+                        <a href="https://www.flipkart.com/search?q=regional%20arts%20and%20crafts&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" class="buy">Buy Now</a>
                     </p>
                 </div>
             </div>
             <div class="cards">
                 <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
+                    <img src="../Resources/shop-card8.webp" alt="">
                 </div>
                 <div class="details">
-                    <h3>Tshirt</h3>
+                    <h3>Assami Shawls</h3>
                     <p>
-                        <span>Price: $59.99</span>
-                        <a href="#" class="buy">Buy Now</a>
-                    </p>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
-                </div>
-                <div class="details">
-                    <h3>Tshirt</h3>
-                    <p>
-                        <span>Price: $59.99</span>
-                        <a href="#" class="buy">Buy Now</a>
-                    </p>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
-                </div>
-                <div class="details">
-                    <h3>Tshirt</h3>
-                    <p>
-                        <span>Price: $59.99</span>
-                        <a href="#" class="buy">Buy Now</a>
-                    </p>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
-                </div>
-                <div class="details">
-                    <h3>Tshirt</h3>
-                    <p>
-                        <span>Price: $59.99</span>
-                        <a href="#" class="buy">Buy Now</a>
-                    </p>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
-                </div>
-                <div class="details">
-                    <h3>Tshirt</h3>
-                    <p>
-                        <span>Price: $59.99</span>
-                        <a href="#" class="buy">Buy Now</a>
-                    </p>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
-                </div>
-                <div class="details">
-                    <h3>Tshirt</h3>
-                    <p>
-                        <span>Price: $59.99</span>
-                        <a href="#" class="buy">Buy Now</a>
-                    </p>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
-                </div>
-                <div class="details">
-                    <h3>Tshirt</h3>
-                    <p>
-                        <span>Price: $59.99</span>
-                        <a href="#" class="buy">Buy Now</a>
-                    </p>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="cimg">
-                    <img src="../Resources/ex-card2.jpeg" alt="">
-                </div>
-                <div class="details">
-                    <h3>Tshirt</h3>
-                    <p>
-                        <span>Price: $59.99</span>
-                        <a href="#" class="buy">Buy Now</a>
+                        <span>Price: Rs.2249</span>
+                        <a href="https://www.flipkart.com/search?q=regional%20arts%20and%20crafts&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" class="buy">Buy Now</a>
                     </p>
                 </div>
             </div>

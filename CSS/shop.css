@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: cursive;
 }
 html, body {
     width: 100%;
@@ -12,8 +12,90 @@ html, body {
     height: 100%;
     /* background-color: black; */
 }
-
-
+.nav {
+    width: 100%;
+    height: 10.5vh;
+    background-color: rgba(58, 166, 255, 0.637);
+    display: flex;
+    gap: 7vw;
+    align-items: center;
+    /* margin: 0vh 10vh; */
+  }
+  .nav-left {
+    margin-left: 10px;
+    width: 27vw;
+    display: flex;
+    gap: 3vh;
+    align-items: center;
+  }
+  .nav-left a {
+    text-decoration: none;
+    min-height: 5vh;
+    
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid rgba(58, 166, 255, 0.637);
+    border: none;
+    transition: all ease-in-out 0.4s;
+  }
+  .nav-left a:hover {
+    background-color: rgba(23, 114, 189, 0.637);
+    border-radius: 10px;
+  }
+  .nav-center {
+    width: 28vw;
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+  }
+  .nav-center img {
+    width: 20%;
+    height: 67.5px;
+  }
+  .nav-center h2 {
+    font-weight: 800;
+  }
+  .nav-right {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-right input {
+    padding: 1vh 1vw;
+    border-radius: 8px;
+  }
+  .nav-right button {
+    padding: 5px 10px;
+    font-weight: 400;
+    border-radius: 7px;
+    font-style: bold;
+    margin-right: 20px;
+  }
+  h1{
+    font-family: cursive;
+    font-size: 2.7em;
+    line-height: 2.2;
+    font-style: italic;
+    letter-spacing: -0.09em;
+    color: #344955;
+  }
+  button{
+    background-color: transparent;
+    color: black;
+    font-size: 1.1em;
+    font-weight: 550;
+    border-radius: 4px;
+    transition: all ease-in-out 0.4s;
+  }
+  button:hover{
+    cursor: pointer;
+    background-color: #333;
+    color: rgb(80, 201, 201);
+    border-color: rgb(80, 201, 201);
+    border-radius: 7px;
+  }
 .cards{
     width: 300px;
     height: 300px;

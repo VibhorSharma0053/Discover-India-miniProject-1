@@ -1,22 +1,26 @@
 /* Add your responsive styles here */
-
+*
+{
+    margin:0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 /* Unique styling */
 body {
-    background-color: rgb(134, 13, 53);
-    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(rgb(45, 47, 48), rgb(82, 39, 15)); 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
 }
 
 header {
-    background-color: rgb(83, 38, 12);
-    color: #270716b4;
+    background-image: linear-gradient(rgb(45, 47, 48), rgb(82, 39, 15));
+    color: #2d2d38b4;
     text-align: center;
     padding: 40px;
-    background-image:url("../Resources/HISTBACK3.jpg");
+    background-image:url("../Resources/arthead.jpg");
 }
-header video{
+video {
     position: fixed;
     top: 0;
     left: 0;
@@ -29,54 +33,41 @@ header video{
 /* Add your previous CSS styles here */
 
 h1 {
-    color:rgb(102, 9, 9);
+    color:rgb(44, 20, 13);
     font-size: 48px;
     font-family: 'Pacifico', cursive;
     text-transform: uppercase;
     position: relative;
-    text-shadow: 4px 4px 4px rgb(145, 63, 104);
+    text-shadow: 4px 4px 4px rgb(62, 156, 117);
     animation:cubic-bezier(0.175, 0.885, 0.32, 1.275);
     
 }
 h2 {
-    color:rgb(88, 16, 64);
+    color:rgb(202, 187, 178);
     font-size: 1.7rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-transform: uppercase;
     position: relative;
     text-shadow: 4px 4px 4px rgb(62);
     font-weight: 1000;
 }
 h3{
-    color:rgb(151, 57, 13);
+    color:rgb(59, 122, 122);
     font-size: 1.2rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-transform: uppercase;
     position: relative;
-    text-shadow: 7px 7px 7px #834229;
+    text-shadow: 7px 7px 7px #0f717a;
     font-weight: 650;
 }
 #ll{
-    width: 70vw;
-    height: 65vh;
+    width: 75vw;
+    height: 62vh;
     border-radius:10px;
-    margin: 15px 40px 30px 50px;
-    box-shadow: 0 0 20px rgb(189, 78, 35);
-    justify-content: center;
-    /* border: 70px solid #9bc0b4; */
-    /* display: flex;
-    justify-content: center; */
+    margin: 15px 40px 30px 20px;
+    box-shadow: 0 0 20px rgb(100, 164, 185);
 }
-
 p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 550;
-    line-height: 1.5;
-    margin: auto;
-    padding: 10px;
-    word-spacing: 0.25rem;
-    margin: auto;
-    font-size: 1.17rem;
+    color: #e4dbdb;
 }
 
 @keyframes cubic-bezier{
@@ -90,7 +81,7 @@ p{
 
 
 nav {
-    background-color: rgb(39, 2, 25);
+    background-color: rgb(38, 42, 48);
     text-align: center;
     padding: 10px;
     border-radius: 20px;
@@ -98,17 +89,17 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #c2511c;
-    text-shadow: #d69970;
+    color: #aeb5b9;
+    text-shadow: #a6cfcd;
     padding: 10px 20px;
     transition: background-color 0.5s;
     border-radius: 20px;
 }
 
 nav a:hover {
-    background-color: #dd7454;
+    background-color: #a6cfcd;
     transition: all ease 0.3s ;
-    color: rgb(37, 2, 33);
+    color: rgb(0, 10, 24);
     border-radius: 20px;
 }
 
@@ -120,12 +111,11 @@ nav a:hover {
 }
 
 .content {
-    background-color: #af76a1;
-    padding: 70px;
+    background-image: linear-gradient(rgb(45, 47, 48), rgb(82, 39, 15));
+    padding: 50px;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgb(209, 93, 15);
+    box-shadow: 0 0 20px rgb(83, 133, 133);
     width: 90vw;
-    justify-content: center;
 }
 
 
@@ -140,8 +130,8 @@ nav a:hover {
 }
 
 footer {
-    background-color: nature;
-    color: #d6b39c;
+    background-image: linear-gradient(rgb(45, 47, 48), rgb(82, 39, 15));
+    color: #fff;
     text-align: center;
     padding: 20px;
 }
@@ -214,7 +204,7 @@ footer {
     backface-visibility: hidden;
     text-align: center;
     min-height: 280px;
-    box-shadow: 0 0 10px solid rgb(255, 72, 0);
+    box-shadow: 0 0 10px solid blue;
 
     height: auto;
     border-radius: 10px;
@@ -223,10 +213,10 @@ footer {
 }
 
 .back {
-    background: #c06db9;
-    background: -webkit-linear-gradient(45deg, #c06db9 0%, #c06db9 100%);
-    background: -o-linear-gradient(45deg, #c06db9 0%, #c06db9 100%);
-    background: linear-gradient(45deg, #c06db9 0%, #c06db9 100%);
+    background: #6DA5C0;
+    background: -webkit-linear-gradient(45deg, #5f9bb9 0%, #0F968C 100%);
+    background: -o-linear-gradient(45deg, #5f9bb9 0%, #0F968C 100%);
+    background: linear-gradient(45deg, #5f9bb9 0%, #0F968C 100%);
 }
 
 .front:after {
@@ -260,7 +250,6 @@ footer {
     left: 0;
     width: 100%;
 }
-
 .inner {
     -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
     transform: translateY(-50%) translateZ(60px) scale(0.94);
@@ -277,7 +266,7 @@ footer {
     z-index: 2;
     font-size: smaller;
     font: 0.8em sans-serif;
-    color: rgb(218, 199, 208);
+    color: rgb(199, 199, 218);
     overflow: -moz-hidden-unscrollable;
 }
 
@@ -320,7 +309,7 @@ footer {
     width: 4rem;
     height: 2px;
     position: absolute;
-    background: #dfcec6;
+    background: #C6D4DF;
     display: block;
     left: 0;
     right: 0;
@@ -351,44 +340,4 @@ footer {
         width: 100%;
         margin: 0 0 2rem 0;
     }
-}
-
-
-.meta-link {
-    align-items: center;
-    backdrop-filter: blur(3px);
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    display: inline-flex;
-    gap: 5px;
-    left: 10px;
-    padding: 10px 20px;
-    position: fixed;
-    text-decoration: none;
-    transition: background-color 600ms, border-color 600ms;
-    z-index: 10000;
-}
-
-.meta-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.meta-link>i,
-.meta-link>span {
-    height: 20px;
-    line-height: 20px;
-}
-
-.meta-link>span {
-    color: white;
-    font-family: "Rubik", sans-serif;
-    transition: color 600ms;
-}
-
-footer{
-    background-color: #1f0b17;
 }

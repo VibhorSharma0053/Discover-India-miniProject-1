@@ -1,11 +1,16 @@
+@font-face {
+  font-family: "Playpen Sans";
+  src: url(../CSS/PlaypenSans-VariableFont_wght.ttf);
+}
 * {
-  font-family: Papyrus, fantasy !important;
+  font-family:"Playpen Sans";
   margin: 0;
   padding: 0;
 }
+
 body {
   width: 100vw;
-  background-color: #f5f5f5;
+  background-color: #94aeb4;
   margin: 0;
   padding: 0;
 }
@@ -15,7 +20,7 @@ body {
   
 }
 .nav {
-  width: 100%;
+  width: 100vw;
   height: 10.5vh;
   background-color: rgba(58, 166, 255, 0.637);
   display: flex;
@@ -32,9 +37,18 @@ body {
 }
 .nav-left a {
   text-decoration: none;
+  min-height: 5vh;
+  
   color: black;
   font-size: 18px;
   font-weight: 600;
+  border: 1px solid rgba(58, 166, 255, 0.637);
+  border: none;
+  transition: all ease-in-out 0.4s;
+}
+.nav-left a:hover {
+  background-color: rgba(23, 114, 189, 0.637);
+  border-radius: 10px;
 }
 .nav-center {
   width: 28vw;
@@ -65,6 +79,26 @@ body {
   border-radius: 7px;
   font-style: bold;
   margin-right: 20px;
+}
+#search{
+  background-color: #84d6d2;
+  outline: none;
+  columns: #333;
+}
+button{
+  background-color: transparent;
+  color: black;
+  font-size: 1.1em;
+  font-weight: 550;
+  border-radius: 4px;
+  transition: all ease-in-out 0.4s;
+}
+button:hover{
+  cursor: pointer;
+  background-color: #333;
+  color: rgb(80, 201, 201);
+  border-color: rgb(80, 201, 201);
+  border-radius: 7px;
 }
 header {
   /* background-image: url(); */
@@ -183,9 +217,9 @@ video {
   width: 100%;
   height: fit-content;
   /* padding: 5px 5px; */
-  position: relative;
+  /* position: relative; */
   
-  text-align: justify;
+  text-align: center;
   transform: translateY(100%);
 }
 .ex-card .card-details p{
@@ -193,7 +227,7 @@ video {
 }
 
 .ex-card:hover {
-  animation: card-anime 1s ease-in-out 1;
+  animation: card-anime 2s ease-in-out 1;
   animation-fill-mode: forwards;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
@@ -218,6 +252,12 @@ video {
 }
 #discover-inner {
   width: 100%;
+}
+#discover-india h2{
+  /* letter-spacing: 1px; */
+  font-size: 4.5em;
+  word-spacing: 20px;
+  text-shadow: 0px 0px 15px rgb(0, 89, 255);
 }
 #discover-india #discover-inner section {
   position: relative;
@@ -252,6 +292,11 @@ video {
   color: white;
   font-weight: 600;
 }
+#discover-india #discover-inner section h1 a:hover {
+  text-decoration: none;
+  color: rgba(0, 195, 255, 0.651);
+  font-weight: 600;
+}
 #discover-india #discover-inner #bg1 {
   background-image: url(../resources/para-taj.jpg);
 }
@@ -262,7 +307,7 @@ video {
   background-image: url(../resources/technology.jpg);
 }
 #discover-india #discover-inner #bg4 {
-  background-image: url(../resources/para-defence1.jpg);
+  background-image: url(../resources/para-art.jpg);
 }
 #discover-india #discover-inner #bg5 {
   background-image: url(../resources/para-destination.jpg);
@@ -500,11 +545,11 @@ ul{
   width: 90vw;
   margin: 5vh 5vw;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 1.2em;
 }
 #fots-mid{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   gap: 20vw;
 }
@@ -518,7 +563,12 @@ ul{
 .fotcont ul li a{
   list-style: none;
   text-decoration: none;
-  color: white;
+  color: #000000;
+}
+.fotcont ul li a:hover{
+  list-style: none;
+  text-decoration: none;
+  color: #cde1e2;
 }
 #banner{
   padding: 10px 20px;
